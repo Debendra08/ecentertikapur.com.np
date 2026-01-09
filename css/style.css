@@ -42,6 +42,9 @@ body {
 /* Header Section */
 header {
     background: var(--heading);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .container {
@@ -50,16 +53,32 @@ header {
     margin: 0 auto;
 }
 
+
+
+header nav .right {
+    display: flex;              /* puts items in a row */
+    align-items: center;        /* vertically centers them */
+    justify-content: flex-end;  /* aligns them to the right side */
+}
+
 header nav .right a {
     color: var(--text-heading);
     text-decoration: none;
-    margin-right: 2rem;
-    margin-left: 1rem; /* nav button left margin */
+    margin: 0 1rem;             /* balanced spacing left & right */
     text-transform: uppercase;
-    transition: all .3s;
-    font-size: 1.3rem;
-    font-weight: 510;
+    transition: color .3s ease; /* smoother hover effect */
+    font-size: 1.2rem;          /* slightly smaller for elegance */
+    font-weight: 600;           /* use a standard professional weight */
+    padding: 0.3rem 0;          /* more breathing space */
 }
+
+header nav .right a:hover {
+    color: var(--accent-color); /* highlight on hover */
+}
+
+
+
+
 
 header nav .right a:hover {
     color: var(--bg-shade-green);
@@ -67,6 +86,7 @@ header nav .right a:hover {
 
 header nav {
     padding: 0.05rem; /* vertical nav width */
+  
 }
 
 header nav .branding {
