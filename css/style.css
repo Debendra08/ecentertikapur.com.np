@@ -78,6 +78,109 @@ header nav .right a:hover {
 
 
 
+/* ============================= */
+/* 🍔 HAMBURGER MENU STYLING */
+/* ============================= */
+
+/* Basic navbar */
+/* /* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #c8f3c8;
+  /* position: relative; */
+  z-index: 1000;
+}
+
+
+
+/* Brand logo */
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.branding img {
+  width: 200px;
+  height: auto;
+  margin-left: 200px;
+}
+
+.branding span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0a7a2f;
+}
+
+/* Menu */
+.nav-menu {
+  display: flex;
+  gap: 25px;
+  margin-right: 100px;
+  width: fit-content;
+  font-size: 20px;
+  pointer-events: auto;
+}
+
+.nav-menu :hover {
+  cursor: pointer;
+  color: #18d73d;
+  transition: all 0.3s ease;
+}
+
+
+.nav-menu a {
+  text-decoration: none;
+  color: #0a7a2f;
+  font-weight: 500;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #0a7a2f;
+}
+
+/* 🔽 Mobile & Tablet */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .branding img {
+    width: 150px;
+    margin-left: 0;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 250px;
+    background: #c8f3c8;
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+    pointer-events: auto;
+  }
+
+  .nav-menu.active {
+    display: flex;
+
+  }
+}
+
+
+
+
 
 
 header nav .right a:hover {

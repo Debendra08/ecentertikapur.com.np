@@ -41,13 +41,68 @@
 
 </head>
 <body>
-    <header>
+
+  <header class="navbar">
+    
+
+  <div class="branding">
+    <img src="./images/e center logo NAME TRANSPARENT.png" alt="E-CENTER">
+    
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <nav class="nav-menu" id="navMenu">
+    <a href="#top">Home</a>
+    <a href="#product">Products</a>
+    <a href="#customer">Customers</a>
+    <a href="#brand">Brands</a>
+    <a href="#about">About Us</a>
+  </nav>
+
+</header>
+ 
+
+  <!-- <header>
+  <div class="container">
+    <nav class="flex items-center navbar">
+      
+      <div class="branding">
+        <img src="./images/e center logo NAME TRANSPARENT.png" alt="E-CENTER">
+      </div>
+
+     
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      
+      <div class="right nav-menu" id="navMenu">
+        <a href="#top">HOME</a>
+        <a href="#product">PRODUCTS</a>
+        <a href="#customer">CUSTOMERS</a>
+        <a href="#brand">BRANDS</a>
+        <a href="#about">ABOUT US</a>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+
+
+     <header>
         <div class="container">
         <nav class="flex items-center">
             <div class="left">
                 <div class="branding">
                     <img src="./images/e center logo NAME TRANSPARENT.png" alt="">
                 </div>
+              
             </div>
             <div class="right flex items-center">
                 <div>
@@ -60,7 +115,7 @@
             </div>
         </nav>
         </div>
-    </header>
+    </header> -->
 
 
         <!-- <section class="hero"> -->
@@ -257,10 +312,32 @@ const slides = document.querySelectorAll('.testimonial-slide');
 const dots = document.querySelectorAll('.dot');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
+  const navMenu = document.getElementById("navMenu");
+  const navLinks = document.querySelectorAll(".nav-menu a");
+
+  function toggleMenu() {
+    navMenu.classList.toggle("active");
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      // Close menu only on mobile
+      if (window.innerWidth <= 768) {
+        navMenu.classList.remove("active");
+      }
+    });
+  });
 
 let index = 0;
 const slideCount = slides.length;
 let autoSlide;
+
+ function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+  }
+  // for hamburger menu 
+
+
 
 /* // Update slide position */
 function updateSlider() {
