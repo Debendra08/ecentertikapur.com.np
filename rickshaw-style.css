@@ -276,253 +276,116 @@ header nav .branding img:hover {
 
 
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(to right, var(--gradient-start) 29%, var(--gradient-end) 100%);
-    padding: 20px 0px;
+
+
+
+
+
+
+.product-page{
+    padding:50px 10%;
 }
 
-.hero .left h1 {
-    color: var(--light-white);
-    margin-left: 15rem;
-    font-size: 4rem;
-    line-height: 1;
-    font-weight: 400;
-    margin-bottom: 1rem;
-}
-
-.hero .left h6 {
-    color: var(--last-text);
-    margin-left: 15rem;
-    font-size: 1.3rem;
-    line-height: 1.3;
-    font-weight: 300;
-    margin-bottom: 0.5rem;
-    margin-top: 1.6rem;
-    margin-right: 15rem;
-}
-
-.hero .left button {
-    background-color: var(--view-button);
-    color: var(--light-white);
-    padding: 20px 40px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 200;
-    transition: background-color 0.3s ease;
-    margin-left: 15rem;
-    margin-top: 1rem;
-
-}
-
-.hero .left button:hover {
-    background-color: #159c2c;
-}
-
-.hero .left button a{
-    text-decoration: none;
-    color: var(--light-white);
-    }
-
-    
-.hero .right img {
-    align-items: center;
-    margin-right: 5rem;
-    width: 600px;
-}
-
-
-/* Responsive Design 📱 */
-/* -------------------- */
-
-/* Tablets (≤ 1024px) */
-@media (max-width: 1024px) {
-  .hero .left h1 {
-    margin-left: 5rem;
-    font-size: 3rem;
-  }
-
-  .hero .left h6,
-  .hero .left button {
-    margin-left: 5rem;
-    margin-right: 5rem;
-  }
-
-  .hero .right img {
-    width: 400px;
-    margin-right: 2rem;
-  }
-}
-
-/* Mobile (≤ 768px) */
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero .left h1 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-
-  .hero .left h6 {
-    margin: 1rem auto;
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-
-  .hero .left button {
-    margin: 1rem auto;
-    padding: 15px 30px;
-    font-size: 1rem;
-  }
-
-  .hero .right img {
-    width: 80%;
-    margin: 1.5rem auto 0;
-  }
-}
-
-/* Small Phones (≤ 480px) */
-@media (max-width: 480px) {
-  .hero .left h1 {
-    font-size: 2rem;
-  }
-
-  .hero .left h6 {
-    font-size: 0.9rem;
-  }
-
-  .hero .left button {
-    padding: 12px 24px;
-    font-size: 0.9rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-/* Grid Section Wrapper */
-.grids {
-    background: var(--bg-white);
-    padding-bottom: 10rem;
-}
-
-/* Filter Section */
-.filter-section {
-    align-items: center;
-}
-
-.filter-section h2 {
-    margin-top: 2rem;
-}
-
-.heading-with-icon {
+.product-container{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 40px;
+    align-items: flex-start;
 }
 
-.heading-with-icon h2 {
-    /* models */
-    font-size: 2.5rem;
-    color: rgb(102, 118, 102)
+/* LEFT IMAGE */
+.productpage-image{
+    flex: 1;
 }
 
-.heading-with-icon img {
-    width: 60px;
-    height: auto;
-    margin-top: 1.5rem;
-/* our models section */
+/* RIGHT SIDE FIXED PANEL */
+.productpage-details{
+    flex: 1;
+    position: sticky;
+    top: 20px;              /* distance from top while scrolling */
+    max-height: 90vh;       /* keep inside screen */
+    overflow-y: auto;       /* internal scroll */
+    padding-right: 10px;
 }
 
-.heading-with-icon h2 span {
-    /* our span section */
-    color: var(--bg-shade-green);
-    font-weight: bold;
+.productpage-details h1{
+    text-decoration: underline;
 }
 
-/* Category Select */
-.category-select {
-    color: var(--bg-shade-green);
+#main-image{
+    width:100%;
+    border-radius:10px;
+    border:1px solid #ddd;
 }
 
-.filter-section select {
-    margin-left: 10rem;
-    padding: 10px 15px;
-    border: 2px solid var(--bg-shade-green);
-    color: var(--bg-shade-green);
-    background-color: white;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 0;
-    width: fit-content;
-    appearance: none;
-    transition: all 0.3s ease;
+.thumbnail-gallery{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+    flex-wrap:wrap;
 }
 
-.filter-section select:focus {
-    outline: var(--bg-dark);
-    box-shadow: 0 0 5px var(--bg-shade-green);
+.thumbnail-gallery img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    cursor:pointer;
+    border-radius:8px;
+    border:2px solid #ddd;
+    transition:0.3s;
 }
 
-.filter-section option {
-    background-color: white;
-    color: var(--text-heading);
+.thumbnail-gallery img:hover{
+    transform:scale(1.05);
+    border-color: var(--bg-shade-green);
 }
 
-/* Models Grid */
-.models-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 30px;
-    margin-top: 30px;
-    padding: 0 10rem;
+.productpage-details{
+    flex:1;
+    min-width:350px;
 }
 
-.model-card {
-    background-color: #f9f9f9;
-    padding: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
+.productpage-details h1{
+    margin-bottom:15px;
 }
 
-.model-card:hover {
-    background-color: var(--bg-shade-green);
-    color: rgb(255, 255, 255);
-    transform: translateY(-5px);
+.productpage-details p{
+    line-height:1.8;
+    color:#555;
 }
 
-.model-card img {
+.productpage-details ul{
+    margin:20px 0;
+    padding-left:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:var(--bg-shade-green);
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    margin-right:10px;
+    margin-top:10px;
+}
+
+.btn:hover{
+    background:#0056b3;
+}
+
+
+#main-image{
     width: 100%;
-    max-height: 200px;
-    object-fit: contain;
-    margin-bottom: 15px;
+    height: 450px;          /* fixed height */
+    object-fit: cover;     /* keeps same size, crops extra part */
+    border-radius: 10px;
+    border: 1px solid #ddd;
 }
 
-.model-card p {
-    display: none;
-    font-size: 0.95rem;
-    margin-top: 1px;
-}
 
-.model-card:hover p {
-    color: var(--last-text);
-    display: block;
-    margin-bottom: 0.5rem;
-}
+
+
+
 
 /* ========================================
    PRODUCT GRID WITH HOVER OVERLAY
@@ -1602,48 +1465,4 @@ header nav .branding img:hover {
 }
 
 
-
-
-.formfill {
-  background: #0f172a;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.quote-form {
-  max-width: 500px;
-  margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.quote-form input,
-.quote-form select,
-.quote-form textarea {
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  font-size: 15px;
-}
-
-.quote-form textarea {
-  resize: none;
-}
-
-.quote-form button {
-  background: #22c55e;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.quote-form button:hover {
-  background: #16a34a;
-}
 
