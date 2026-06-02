@@ -536,8 +536,12 @@ header nav .branding img:hover {
 
 /* Extra Small Devices (Phones ≤ 480px) */
 @media (max-width: 480px) {
+  .product-page {
+    padding: 30px 10px;
+    color: black;
+  } 
   .heading-with-icon h2 {
-    font-size: 1.5rem;
+    font-size: 15rem;
   }
 
   .grid-container {
@@ -1466,3 +1470,170 @@ header nav .branding img:hover {
 
 
 
+/* =========================
+   PRODUCT PAGE RESPONSIVE
+========================= */
+
+.product-container{
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.productpage-image{
+    flex: 1;
+    position: sticky;
+    top: 100px;
+}
+
+.productpage-details{
+    flex: 1;
+}
+
+#main-image{
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.thumbnail-gallery{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.thumbnail-gallery img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.thumbnail-gallery img:hover{
+    transform: scale(1.05);
+}
+
+.productpage-details h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.productpage-details h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.productpage-details ul{
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.productpage-details li{
+    margin-bottom: 8px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 24px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px){
+
+    .product-container{
+        gap: 25px;
+        padding: 30px 15px;
+    }
+
+    .productpage-details h1{
+        font-size: 2rem;
+    }
+
+    .thumbnail-gallery img{
+        width: 70px;
+        height: 70px;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px){
+
+    .product-container{
+        flex-direction: column;
+    }
+
+    .productpage-image{
+        position: static;
+        width: 100%;
+    }
+
+    .productpage-details{
+        width: 100%;
+    }
+
+    .productpage-details h1{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .thumbnail-gallery{
+        justify-content: center;
+    }
+
+    .thumbnail-gallery img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .btn{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px){
+
+    .product-container{
+        padding: 20px 12px;
+    }
+
+    .productpage-details h1{
+        font-size: 1.5rem;
+    }
+
+    .productpage-details p,
+    .productpage-details li{
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .thumbnail-gallery img{
+        width: 55px;
+        height: 55px;
+    }
+
+}

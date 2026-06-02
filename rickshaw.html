@@ -47,18 +47,19 @@
 
     <div class="slider">
         <div class="slide-container">
-            <img id="main-image" src="./images/rickshaw 1.png" alt="Shadab E-Rickshaw">
+            <img id="main-image" src="./images/shaddab1.jpg" alt="Shadab E-Rickshaw">
 
             <button class="prev" onclick="prevSlide()">&#10094;</button>
             <button class="next" onclick="nextSlide()">&#10095;</button>
         </div>
 
         <div class="thumbnail-gallery">
-            <img src="./images/rick, scooter.jpg" onclick="goToSlide(0)">
-            <img src="./images/batteries icon.png" onclick="goToSlide(1)">
-            <img src="./images/6 customer.png" onclick="goToSlide(2)">
-            <img src="./images/customer 4.jpg" onclick="goToSlide(3)">
-            <img src="./images/rickshaw.png" onclick="goToSlide(4)">
+            <img src="./images/shaddab1.jpg" onclick="goToSlide(0)">
+            <img src="./images/shaddab2.jpg" onclick="goToSlide(1)">
+            <img src="./images/shaddab3.jpg" onclick="goToSlide(2)">
+            <img src="./images/shaddab4.jpg" onclick="goToSlide(3)">
+            <img src="./images/shaddab5.jpg" onclick="goToSlide(4)">
+            <img src="./images/shaddab6.jpg" onclick="goToSlide(5)">
         </div>
     </div>
 
@@ -110,32 +111,33 @@ function changeImage(image) {
 
 <script>
 let images = [
-    "./images/rickshaw 1.png",
-    "./images/rick, scooter.jpg",
-    "./images/batteries icon.png",
-    "./images/6 customer.png",
-    "./images/customer 4.jpg"
+    "./images/shaddab1.jpg",
+    "./images/shaddab2.jpg",
+    "./images/shaddab3.jpg",
+    "./images/shaddab4.jpg",
+    "./images/shaddab5.jpg",
+    "./images/shaddab6.jpg",
 ];
 
-let index = 0;
+let productindex = 0;
 let mainImage = document.getElementById("main-image");
 
 // Show image
 function showImage(i){
-    index = i;
-    mainImage.src = images[index];
+    productindex = i;
+    mainImage.src = images[productindex];
 }
 
 // Next
 function nextSlide(){
-    index = (index + 1) % images.length;
-    mainImage.src = images[index];
+    productindex = (productindex + 1) % images.length;
+    mainImage.src = images[productindex];
 }
 
 // Prev
 function prevSlide(){
-    index = (index - 1 + images.length) % images.length;
-    mainImage.src = images[index];
+    productindex = (productindex - 1 + images.length) % images.length;
+    mainImage.src = images[productindex];
 }
 
 // Thumbnail click
@@ -376,6 +378,9 @@ startAutoSlide();
 
 
 
-  <script src="script.js"></script>
+  <script src="./script.js">
+
+    
+  </script>
 </body>
 </html>
